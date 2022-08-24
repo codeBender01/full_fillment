@@ -2,31 +2,52 @@
   .container {
     width: 95%;
     margin: 0 auto;
+  }
+  p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    width: 70%;
+    margin: 20px auto;
+  }
 
-    p {
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 150%;
-      text-align: center;
-    }
-
-    .services {
-      display: flex;
-
-      .service {
-        h3 {
-          font-weight: 700;
-          font-size: 40px;
-          line-height: 150%;
-          text-align: center;
-          margin: 0;
-        }
-        .tick {
-          margin-top: 10px;
-          display: flex;
-          align-items: center;
-        }
+  .services {
+    display: flex;
+    margin: 20px 0;
+    .service {
+      h3 {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 150%;
+        text-align: center;
+        margin: 0;
+      }
+      .tick {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
       }
     }
+  }
+
+  .integrations {
+    background-color: #181818;
+    color: #fff;
+    padding: 50px 0;
+    margin: 40px 0;
+  }
+
+  .sales {
+    margin: 40px 0;
+    h1 {
+      margin: 0 auto;
+      letter-spacing: 0.05em;
+      font-weight: 800;
+      font-size: 64px;
+      line-height: 116%;
+      text-align: center;
+    }
+    margin: 0 auto;
   }
 }
