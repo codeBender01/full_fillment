@@ -39,7 +39,7 @@ const stats = [
     smallText: "Клиентские услуги",
   },
   {
-    id: 1,
+    id: 4,
     number: "1-2 дня",
     quality: "Земля Туркменистан",
     smallText: "Сеть доставки",
@@ -113,9 +113,47 @@ const plan = [
     img: planet,
   },
   {
-    id: 1,
+    id: 4,
     title: "Создайте cвой бренд",
     img: mountain,
+  },
+];
+
+const profileImages = [
+  {
+    id: 1,
+    img: profile1,
+  },
+  {
+    id: 2,
+    img: profile2,
+  },
+  {
+    id: 3,
+    img: profile2,
+  },
+];
+
+const achievements = [
+  {
+    id: 1,
+    numbers: "99,999",
+    text: "Артикул и продукты",
+  },
+  {
+    id: 2,
+    numbers: "9,999",
+    text: "м² фулфилмент-центр",
+  },
+  {
+    id: 3,
+    numbers: "9,999+",
+    text: "Счастливые клиенты",
+  },
+  {
+    id: 4,
+    numbers: "99",
+    text: "Многолетний опыт",
   },
 ];
 
@@ -232,27 +270,42 @@ class Home extends React.Component {
               </p>
             </div>
 
-            <div className="customer">
-              <div className="profile-pic">
-                <img src={profile1} alt="" />
-              </div>
-              <div className="feedback">
-                <p>
-                  Уsse veniam, iriure dolor sit vel dolor ut aliquip zzril
-                  consectetuer illum molestie nostrud augue vel feugiat suscipit
-                  ea consequat. aliquam commodo delenit ex diam et magna
-                  ullamcorper laoreet odio illum molestie nostrud augue vel
-                  feugiat suscipit ea consequat. aliquam commodo delenit ex diam
-                  et magna ullamcorper laoreet odio
-                </p>
+            {profileImages.map((img) => {
+              return (
+                <div className="customer" key={img.id}>
+                  <div className="profile-pic">
+                    <img src={img.img} alt="" />
+                  </div>
+                  <div className="feedback">
+                    <p>
+                      Уsse veniam, iriure dolor sit vel dolor ut aliquip zzril
+                      consectetuer illum molestie nostrud augue vel feugiat
+                      suscipit ea consequat. aliquam commodo delenit ex diam et
+                      magna ullamcorper laoreet odio illum molestie nostrud
+                      augue vel feugiat suscipit ea consequat. aliquam commodo
+                      delenit ex diam et magna ullamcorper laoreet odio
+                    </p>
 
-                <div>
-                  <h5>Имя</h5>
-                  <span>Профессия</span>
+                    <div>
+                      <h5>Имя</h5>
+                      <span>Профессия</span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
+        </div>
+
+        <div className="achievements flex">
+          {achievements.map((ach) => {
+            return (
+              <div key={ach.id}>
+                <h4>{ach.numbers}</h4>
+                <p>{ach.text}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     );

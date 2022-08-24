@@ -1,0 +1,26 @@
+.main-title {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+
+  h1 {
+    letter-spacing: 0.05em;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 116%;
+    margin: 0;
+  }
+  &::before {
+    content: "";
+    width: 120px;
+    background-color: #fbb065;
+    margin: 0 auto;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+  }
+}
