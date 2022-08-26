@@ -99,7 +99,7 @@ function Service(props) {
 class Technologies extends React.Component {
   render() {
     return (
-      <div className="technologies">
+      <div className="technologies pad">
         <Title text="Наше программное обеспечение создано, чтобы помочь вам масштабироваться" />
         <div className="container">
           <p>

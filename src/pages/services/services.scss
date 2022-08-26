@@ -21,4 +21,16 @@
       }
     }
   }
+
+  @media (max-width: 600px) {
+    & {
+      .types {
+        .service-type {
+          h3 {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
 }

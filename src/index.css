@@ -12,14 +12,29 @@
 body {
   margin: 0;
   padding: 0;
+
   box-sizing: border-box;
 
   font-family: NunitoSans, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.home-pad {
+  padding-top: 130px;
+}
+
+@media (max-width: 950px) {
+  .home-pad {
+    padding-top: 80px;
+  }
+}
+.pad {
+  padding-top: 150px;
 }

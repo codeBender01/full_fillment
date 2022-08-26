@@ -5,7 +5,7 @@ import "./contact-us.scss";
 class ContactUs extends React.Component {
   render() {
     return (
-      <div className="contact-us">
+      <div className="contact-us pad">
         <Title text="Свяжитесь с нами" />
         <div className="line"></div>
 
@@ -45,7 +45,7 @@ class ContactUs extends React.Component {
           </div>
           <div>
             <label htmlFor="message">Сообщение *</label>
-            <input type="text" id="message" className="textarea" />
+            <textarea name="" id="" cols="30" rows="10"></textarea>
           </div>
 
           <input type="submit" value="ОТПРАВИТЬ СООБШЕНИЕ" className="submit" />

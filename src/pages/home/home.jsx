@@ -182,7 +182,7 @@ function Benefit(props) {
 class Home extends React.Component {
   render() {
     return (
-      <div className="home">
+      <div className="home home-pad">
         <div className="welcome-text flex">
           <div>
             <h3>Самый умный способ выполнить ваши онлайн-заказы.</h3>
@@ -210,17 +210,23 @@ class Home extends React.Component {
           })}
         </div>
 
-        <div className="benefits flex">
-          {benefits.map((ben) => {
-            return (
-              <Benefit
-                img={ben.img}
-                title={ben.title}
-                def={ben.def}
-                key={ben.id}
-              />
-            );
-          })}
+        <div className="benefits ">
+          <div className="title">
+            <h2>Почему именно мы?</h2>
+          </div>
+
+          <div className="wrapper flex">
+            {benefits.map((ben) => {
+              return (
+                <Benefit
+                  img={ben.img}
+                  title={ben.title}
+                  def={ben.def}
+                  key={ben.id}
+                />
+              );
+            })}
+          </div>
         </div>
 
         <div className="chars flex">

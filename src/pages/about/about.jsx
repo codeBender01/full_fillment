@@ -16,7 +16,7 @@ import decision from "../../images/decision.png";
 class About extends React.Component {
   render() {
     return (
-      <div className="about">
+      <div className="about pad">
         <Title text="О нас" />
         <p>
           Совершенство в сфере электронной коммерции — наша страсть, и наша

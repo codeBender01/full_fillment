@@ -49,7 +49,7 @@ function Service(props) {
 class Services extends React.Component {
   render() {
     return (
-      <div className="services">
+      <div className="services pad">
         <Title text="Наши услуги делают выполнение заказа легким" />
         <div className="types">
           {serviceTypes.map((ser) => {
