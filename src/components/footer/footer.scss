@@ -69,4 +69,26 @@
       color: #fff;
     }
   }
+
+  @media (max-width: 769px) {
+    & {
+      .footer-nav {
+        flex-direction: column;
+        .logo {
+          width: 60%;
+        }
+
+        ul {
+          flex-direction: column;
+          li {
+            margin: 30px 0;
+          }
+        }
+
+        .contact {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
 }

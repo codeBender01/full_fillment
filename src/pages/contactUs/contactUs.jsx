@@ -45,10 +45,16 @@ class ContactUs extends React.Component {
           </div>
           <div>
             <label htmlFor="message">Сообщение *</label>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea name="message" id="message" rows="10"></textarea>
           </div>
 
-          <input type="submit" value="ОТПРАВИТЬ СООБШЕНИЕ" className="submit" />
+          <div className="submit-btn">
+            <input
+              type="submit"
+              value="ОТПРАВИТЬ СООБШЕНИЕ"
+              className="submit"
+            />
+          </div>
         </form>
       </div>
     );

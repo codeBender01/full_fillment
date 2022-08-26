@@ -123,7 +123,7 @@ class About extends React.Component {
               перемещения по складу и оптимального использования вертикального
               пространства.
             </p>
-            <img src={optimize} alt="care" />
+            <img src={optimize} alt="care" className="align-right" />
           </div>
           <div className="eco-def">
             <img src={saving} alt="care" />
@@ -142,7 +142,7 @@ class About extends React.Component {
               поставок отправляются с нулевым выбросом углерода , что не
               оказывает воздействия на окружающую среду.
             </p>
-            <img src={decision} alt="care" />
+            <img src={decision} alt="decision" className="align-right" />
           </div>
         </div>
 

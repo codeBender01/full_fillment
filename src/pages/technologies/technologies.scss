@@ -29,6 +29,32 @@
         align-items: center;
       }
     }
+
+    @media (max-width: 1000px) {
+      & {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .service {
+          width: 50%;
+        }
+      }
+    }
+    @media (max-width: 500px) {
+      & {
+        .service {
+          width: 100%;
+          h3 {
+            font-size: 24px;
+          }
+
+          .tick {
+            span {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
   }
 
   .integrations {
@@ -49,5 +75,20 @@
       text-align: center;
     }
     margin: 0 auto;
+  }
+
+  @media (max-width: 769px) {
+    & {
+      p {
+        width: 100%;
+        font-size: 18px;
+      }
+
+      .sales {
+        h1 {
+          font-size: 36px;
+        }
+      }
+    }
   }
 }

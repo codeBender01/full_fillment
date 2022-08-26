@@ -38,3 +38,9 @@ code {
 .pad {
   padding-top: 150px;
 }
+
+@media (max-width: 769px) {
+  .pad {
+    padding-top: 100px;
+  }
+}

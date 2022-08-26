@@ -30,6 +30,10 @@
       h1 {
         font-size: 36px;
       }
+
+      &::before {
+        width: 80px;
+      }
     }
   }
 }
