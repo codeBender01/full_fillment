@@ -1,9 +1,9 @@
 import React from "react";
+import Carousel from "../../components/carousel/Carousel";
 import "./home.scss";
 
 //images used on Home Page
 
-import order from "../../images/order.png";
 import time from "../../images/time.png";
 import money from "../../images/money.png";
 import chat from "../../images/chat.png";
@@ -183,19 +183,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home home-pad">
-        <div className="welcome-text flex">
-          <div>
-            <h3>Самый умный способ выполнить ваши онлайн-заказы.</h3>
-            <p>
-              quis tincidunt ea iusto Lorem ex eu enim augue dignissim lobortis
-              suscipit aliquip elit, odio vel ullamcorper amet, et veniam, vel
-              facilisi. volutpat. dolor nonummy minim qui wisi in euismod
-              dignissim lobortis suscipit aliquip elit, odio vel ullamcorper
-              amet, et veniam, vel facilisi.
-            </p>
-          </div>
-          <img src={order} alt="welcome" />
-        </div>
+        <Carousel />
 
         <div className="stats flex">
           {stats.map((stat) => {
