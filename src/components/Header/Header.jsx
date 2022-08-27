@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import nav from "../../data/data";
 import "./header.scss";
 
@@ -7,17 +7,21 @@ const contactBtn = "Свяжитесь с нами";
 
 function Header() {
   const [selectedNavbarLink, setSelectedNavbarLink] = useState(nav[0].id);
+  const location = useLocation();
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    for (let n of nav) {
+      if (location.pathname === n.path) {
+        setSelectedNavbarLink(n.id);
+      }
+    }
+  }, [location.pathname]);
 
   const classListToggler = () => {
     const header = document.body.querySelector(".header");
     const burger = document.body.querySelector(".burger-menu");
     const nav = document.body.querySelector(".header-links");
 
-    console.log(header);
-    console.log(nav);
-    console.log(burger);
     header.classList.toggle("active");
     burger.classList.toggle("active");
     nav.classList.toggle("active");

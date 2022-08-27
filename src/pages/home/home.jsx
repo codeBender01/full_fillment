@@ -217,15 +217,17 @@ class Home extends React.Component {
           </div>
         </div>
 
-        <div className="chars flex">
-          {chars.map((char) => {
-            return (
-              <div className="char flex" key={char.id}>
-                <img src={char.img} alt="illustration" />
-                <span>{char.title}</span>
-              </div>
-            );
-          })}
+        <div className="chars">
+          <div className="container flex">
+            {chars.map((char) => {
+              return (
+                <div className="char flex" key={char.id}>
+                  <img src={char.img} alt="illustration" />
+                  <span>{char.title}</span>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
         <div className="business-plan">
@@ -291,15 +293,17 @@ class Home extends React.Component {
           </div>
         </div>
 
-        <div className="achievements flex">
-          {achievements.map((ach) => {
-            return (
-              <div key={ach.id}>
-                <h4>{ach.numbers}</h4>
-                <p>{ach.text}</p>
-              </div>
-            );
-          })}
+        <div className="achievements">
+          <div className="container flex">
+            {achievements.map((ach) => {
+              return (
+                <div key={ach.id}>
+                  <h4>{ach.numbers}</h4>
+                  <p>{ach.text}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     );

@@ -1,6 +1,6 @@
 .technologies {
   .container {
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
   }
   p {
@@ -14,7 +14,9 @@
 
   .services {
     display: flex;
-    margin: 20px 0;
+    margin: 20px auto;
+    width: 95%;
+
     .service {
       h3 {
         font-weight: 700;
@@ -30,7 +32,7 @@
       }
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1050px) {
       & {
         justify-content: space-between;
         flex-wrap: wrap;

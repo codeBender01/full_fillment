@@ -18,8 +18,10 @@ function Footer() {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname === contact) {
-      setSelectedNavbarLink(-1);
+    for (let n of nav) {
+      if (location.pathname === n.path) {
+        setSelectedNavbarLink(n.id);
+      }
     }
   }, [location.pathname]);
 
