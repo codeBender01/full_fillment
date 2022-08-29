@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "../../components/carousel/Carousel";
+import { FadeIn } from "react-slide-fade-in";
 import "./home.scss";
 
 //images used on Home Page
@@ -185,126 +186,159 @@ class Home extends React.Component {
       <div className="home home-pad">
         <Carousel />
 
-        <div className="stats flex">
-          {stats.map((stat) => {
-            return (
-              <Stat
-                number={stat.number}
-                key={stat.id}
-                quality={stat.quality}
-                smallText={stat.smallText}
-              />
-            );
-          })}
-        </div>
-
-        <div className="benefits ">
-          <div className="title">
-            <h2>Почему именно мы?</h2>
-          </div>
-
-          <div className="wrapper flex">
-            {benefits.map((ben) => {
+        <FadeIn>
+          <div className="stats flex">
+            {stats.map((stat) => {
               return (
-                <Benefit
-                  img={ben.img}
-                  title={ben.title}
-                  def={ben.def}
-                  key={ben.id}
+                <Stat
+                  number={stat.number}
+                  key={stat.id}
+                  quality={stat.quality}
+                  smallText={stat.smallText}
                 />
               );
             })}
           </div>
-        </div>
+        </FadeIn>
 
-        <div className="chars">
-          <div className="container flex">
-            {chars.map((char) => {
-              return (
-                <div className="char flex" key={char.id}>
-                  <img src={char.img} alt="illustration" />
-                  <span>{char.title}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="business-plan">
-          <div className="title">
-            <h2>Гибкие планы для развития бизнеса</h2>
-          </div>
-
-          <div className="flex illustration">
-            {plan.map((p) => {
-              return (
-                <div key={p.id} className="plan">
-                  <img src={p.img} alt="illustration" />
-                  <h4>{p.title}</h4>
-                  <p>
-                    molestie qui dolor feugait enim suscipit consequat.
-                    hendrerit accumsan et ut duis nibh autem aliquip dolor vel
-                    sed tation delenit wisi et nulla consectetuer te veniam,
-                    quis dignissim zzril ullamcorper at augue lobortis in
-                    praesent dolore nisl luptatum ut ex in facilisi. tincidunt
-                    erat vero Ut{" "}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-        <div className="customers ">
-          <div className="container flex">
+        <FadeIn from="bottom" positionOffset={400} triggerOffset={200}>
+          <div className="benefits ">
             <div className="title">
-              <h2> Что говорят наши клиенты</h2>
-              <p>
-                От начинающих предпринимателей до признанных брендов электронной
-                коммерции, узнайте, что говорят наши клиенты о нашей сети
-                фулфилмент-центров 3PL и команде преданных своему делу
-                профессионалов фулфилмента.{" "}
-              </p>
+              <h2>Почему именно мы?</h2>
             </div>
 
-            {profileImages.map((img) => {
-              return (
-                <div className="customer" key={img.id}>
-                  <div className="profile-pic">
-                    <img src={img.img} alt="" />
-                  </div>
-                  <div className="feedback">
-                    <p>
-                      Уsse veniam, iriure dolor sit vel dolor ut aliquip zzril
-                      consectetuer illum molestie nostrud augue vel feugiat
-                      suscipit ea consequat. aliquam commodo delenit ex diam et
-                      magna ullamcorper laoreet odio illum molestie nostrud
-                      augue vel feugiat suscipit ea consequat. aliquam commodo
-                      delenit ex diam et magna ullamcorper laoreet odio
-                    </p>
+            <div className="wrapper flex">
+              {benefits.map((ben) => {
+                return (
+                  <Benefit
+                    img={ben.img}
+                    title={ben.title}
+                    def={ben.def}
+                    key={ben.id}
+                  />
+                );
+              })}
+            </div>
+          </div>
+        </FadeIn>
 
-                    <div>
-                      <h5>Имя</h5>
-                      <span>Профессия</span>
+        <FadeIn
+          from="right"
+          positionOffset={400}
+          triggerOffset={200}
+          delayInMilliseconds={200}
+        >
+          <div className="chars">
+            <div className="container flex">
+              {chars.map((char) => {
+                return (
+                  <div className="char flex" key={char.id}>
+                    <img src={char.img} alt="illustration" />
+                    <span>{char.title}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </FadeIn>
+
+        <FadeIn
+          from="bottom"
+          positionOffset={400}
+          triggerOffset={200}
+          delayInMilliseconds={200}
+        >
+          <div className="business-plan">
+            <div className="title">
+              <h2>Гибкие планы для развития бизнеса</h2>
+            </div>
+
+            <div className="flex illustration">
+              {plan.map((p) => {
+                return (
+                  <div key={p.id} className="plan">
+                    <img src={p.img} alt="illustration" />
+                    <h4>{p.title}</h4>
+                    <p>
+                      molestie qui dolor feugait enim suscipit consequat.
+                      hendrerit accumsan et ut duis nibh autem aliquip dolor vel
+                      sed tation delenit wisi et nulla consectetuer te veniam,
+                      quis dignissim zzril ullamcorper at augue lobortis in
+                      praesent dolore nisl luptatum ut ex in facilisi. tincidunt
+                      erat vero Ut{" "}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </FadeIn>
+
+        <FadeIn
+          from="top"
+          positionOffset={400}
+          triggerOffset={200}
+          delayInMilliseconds={200}
+        >
+          <div className="customers">
+            <div className="container flex">
+              <div className="title">
+                <h2> Что говорят наши клиенты</h2>
+                <p>
+                  От начинающих предпринимателей до признанных брендов
+                  электронной коммерции, узнайте, что говорят наши клиенты о
+                  нашей сети фулфилмент-центров 3PL и команде преданных своему
+                  делу профессионалов фулфилмента.{" "}
+                </p>
+              </div>
+
+              {profileImages.map((img) => {
+                return (
+                  <div className="customer" key={img.id}>
+                    <div className="profile-pic">
+                      <img src={img.img} alt="" />
+                    </div>
+                    <div className="feedback">
+                      <p>
+                        Уsse veniam, iriure dolor sit vel dolor ut aliquip zzril
+                        consectetuer illum molestie nostrud augue vel feugiat
+                        suscipit ea consequat. aliquam commodo delenit ex diam
+                        et magna ullamcorper laoreet odio illum molestie nostrud
+                        augue vel feugiat suscipit ea consequat. aliquam commodo
+                        delenit ex diam et magna ullamcorper laoreet odio
+                      </p>
+
+                      <div>
+                        <h5>Имя</h5>
+                        <span>Профессия</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
-        </div>
+        </FadeIn>
 
-        <div className="achievements">
-          <div className="container flex">
-            {achievements.map((ach) => {
-              return (
-                <div key={ach.id}>
-                  <h4>{ach.numbers}</h4>
-                  <p>{ach.text}</p>
-                </div>
-              );
-            })}
+        <FadeIn
+          from="left"
+          positionOffset={400}
+          triggerOffset={200}
+          delayInMilliseconds={200}
+        >
+          <div className="achievements">
+            <div className="container flex">
+              {achievements.map((ach) => {
+                return (
+                  <div key={ach.id}>
+                    <h4>{ach.numbers}</h4>
+                    <p>{ach.text}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
+        </FadeIn>
       </div>
     );
   }

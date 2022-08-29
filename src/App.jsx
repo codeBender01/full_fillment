@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BoxLoading } from "react-loadingg";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/footer/Footer";
@@ -12,7 +13,7 @@ const Services = lazy(() => import("./pages/services/services"));
 function App() {
   return (
     <>
-      <Suspense fallback={<span>Loading...</span>}>
+      <Suspense fallback={<BoxLoading />}>
         <Router>
           <Header />
           <Routes>

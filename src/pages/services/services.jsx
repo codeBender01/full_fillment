@@ -1,6 +1,8 @@
 import React from "react";
 import Title from "../../components/title/Title";
 import Form from "../../components/form/Form";
+
+import { FadeIn } from "react-slide-fade-in/dist/fade-in";
 import "./services.scss";
 
 const serviceTypes = [
